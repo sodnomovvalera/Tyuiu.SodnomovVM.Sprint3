@@ -30,12 +30,28 @@ namespace Tyuiu.SodnomovVM.Sprint3.Task7.V18
             int x = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введите конец  промежутка");
             int y = Convert.ToInt32(Console.ReadLine());
+            int len = ds.GetMassFunction(x, y).Length;
+            double[] value;
+            value = new double[len];
+
+            value = ds.GetMassFunction(x, y);
+
 
             Console.WriteLine();
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-
+            Console.WriteLine("+----------+----------+");
+            Console.WriteLine("|    X     |   F(X)   |");
+            Console.WriteLine("+----------+----------+");
+            for (int i = 0; i<=len-1; i++)
+            {
+                Console.WriteLine("|{0,5:d}        |   {1,5:f2}   |", x, value[i]);
+                x++;
+            }
+            Console.WriteLine("+----------+----------+");
+            Console.ReadKey();
         }
+        
     }
 }
