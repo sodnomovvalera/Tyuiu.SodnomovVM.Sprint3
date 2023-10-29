@@ -25,11 +25,15 @@ namespace Tyuiu.SodnomovVM.Sprint3.Task7.V18
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
-            DataService ds = new DataService();
+
+            DataService ds = new DataService(); 
+
             Console.WriteLine("Введите начало промежутка");
             int x = Convert.ToInt32(Console.ReadLine());
+
             Console.WriteLine("Введите конец  промежутка");
             int y = Convert.ToInt32(Console.ReadLine());
+
             int len = ds.GetMassFunction(x, y).Length;
             double[] value;
             value = new double[len];
@@ -50,6 +54,7 @@ namespace Tyuiu.SodnomovVM.Sprint3.Task7.V18
                 x++;
             }
             Console.WriteLine("+----------+----------+");
+           
             Console.ReadKey();
         }
         
