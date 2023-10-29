@@ -9,6 +9,9 @@ namespace Tyuiu.SodnomovVM.Sprint3.Task7.V18.Test
         [TestMethod]
         public void TestMethod1()
         {
+            int a = 1;
+            int b = 1;
+            Assert.AreEqual(a, b);
         }
     }
 }
